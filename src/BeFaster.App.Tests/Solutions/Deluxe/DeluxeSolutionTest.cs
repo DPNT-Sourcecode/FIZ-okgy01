@@ -1,13 +1,19 @@
-﻿using BeFaster.App.Solutions.SUM;
+﻿using BeFaster.App.Solutions.FIZ;
 using NUnit.Framework;
 
 
-namespace Deluxe
+ namespace BeFaster.App.Tests.Solutions.Deluxe
 {
+
+    [TestFixture]
     public class DeluxeSolutionTest
     {
-        public DeluxeSolutionTest()
-        {
+        [TestCase(11,22,1111, ExpectedResult ="deluxe")]
+        public string DeluxeTrueTest(int input) {
+            return FizzBuzzSolution.FizzBuzz(input);
         }
+
+
     }
 }
+
