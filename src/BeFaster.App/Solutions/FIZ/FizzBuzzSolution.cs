@@ -8,8 +8,8 @@ namespace BeFaster.App.Solutions.FIZ
         {
 
 
-            int ofThree = number ^ 3;
-            var ofFive = number ^ 5;
+            int ofThree = number % 3;
+            var ofFive = number % 5;
 
             if (ofThree == 0 && ofFive == 0) {
                 return "fizz buzz";
@@ -29,4 +29,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
