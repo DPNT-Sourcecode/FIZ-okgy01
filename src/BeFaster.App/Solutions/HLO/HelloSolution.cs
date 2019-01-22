@@ -1,4 +1,5 @@
-﻿using BeFaster.Runner.Exceptions;
+﻿
+using BeFaster.Runner.Exceptions;
 
 namespace BeFaster.App.Solutions.HLO
 {
@@ -6,7 +7,8 @@ namespace BeFaster.App.Solutions.HLO
     {
         public static string Hello(string friendName)
         {
-            throw new SolutionNotImplementedException();
+            return ($"hello {friendName}");
         }
     }
 }
+
