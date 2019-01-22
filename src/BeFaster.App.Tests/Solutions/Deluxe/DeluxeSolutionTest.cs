@@ -8,7 +8,7 @@ using NUnit.Framework;
     [TestFixture]
     public class DeluxeSolutionTest
     {
-        [TestCase(1111, ExpectedResult ="deluxe")]
+        [TestCase(11, ExpectedResult ="deluxe")]
         public string DeluxeTrueTest(int input) {
             return FizzBuzzSolution.FizzBuzz(input);
         }
@@ -16,5 +16,6 @@ using NUnit.Framework;
 
     }
 }
+
 
 
