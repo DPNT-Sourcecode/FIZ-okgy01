@@ -10,7 +10,11 @@ namespace BeFaster.App.Solutions.FIZ
 
             int ofThree = number % 3;
             var ofFive = number % 5;
-            if (IsDeluxe(number)==true && (ofThree == 0 || number.ToString().Contains("3")) && (ofFive == 0 || number.ToString().Contains("5")))
+            if (IsDeluxe(number) == true && (ofThree != 0 || !number.ToString().Contains("3")) && (ofFive != 0 || !number.ToString().Contains("5")))
+            {
+                return "deluxe";
+            }
+            else if (IsDeluxe(number)==true && (ofThree == 0 || number.ToString().Contains("3")) && (ofFive == 0 || number.ToString().Contains("5")))
             {
                 return "fizz buzz deluxe";
             }else if ((ofThree == 0 || number.ToString().Contains("3"))  && (ofFive == 0 || number.ToString().Contains("5")  )) {
@@ -66,5 +70,6 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
