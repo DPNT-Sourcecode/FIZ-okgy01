@@ -23,12 +23,23 @@ namespace BeFaster.App.Solutions.FIZ
             }
 
 
+        }
 
 
+        static bool IsDeluxe(int input) {
+
+
+            var retval = false;
+
+            return retval;
 
         }
+
+
+
     }
 }
+
 
 
 
