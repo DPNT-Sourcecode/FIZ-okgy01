@@ -19,7 +19,7 @@ namespace BeFaster.App.Solutions.FIZ
                 return "fizz";
             }else
             {
-                return "example 1";
+                return 1.ToString();
             }
 
 
@@ -29,4 +29,3 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
-
