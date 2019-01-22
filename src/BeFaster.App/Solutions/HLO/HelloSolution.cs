@@ -7,8 +7,10 @@ namespace BeFaster.App.Solutions.HLO
     {
         public static string Hello(string friendName)
         {
-            return ($"hello {friendName}");
+            //return ($"hello {friendName}");
+            return "hello World";
         }
     }
 }
+
 
