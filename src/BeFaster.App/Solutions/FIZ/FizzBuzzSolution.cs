@@ -70,7 +70,3 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
-
-
-
-

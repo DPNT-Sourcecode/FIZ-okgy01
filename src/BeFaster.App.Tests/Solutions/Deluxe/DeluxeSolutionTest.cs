@@ -14,8 +14,11 @@ using NUnit.Framework;
         }
 
 
+        [TestCase(33, ExpectedResult = "fizz deluxe")]
+        public string FizzDeluxeTrueTest(int input)
+        {
+            return FizzBuzzSolution.FizzBuzz(input);
+        }
+
     }
 }
-
-
-
