@@ -19,7 +19,7 @@ namespace BeFaster.App.Solutions.FIZ
                 return "fizz";
             }else
             {
-                return 1.ToString();
+                return number.ToString();
             }
 
 
@@ -29,3 +29,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
