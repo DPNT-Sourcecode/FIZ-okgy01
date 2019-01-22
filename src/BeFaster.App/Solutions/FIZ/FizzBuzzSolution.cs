@@ -46,7 +46,7 @@ namespace BeFaster.App.Solutions.FIZ
                 for (var i = 1; i < test.Length; i++)
                 {
 
-                    if (test.Substring(i) == test.Substring(i - 1))
+                    if (test.Substring(i,1) == test.Substring((i - 1),1))
                     {
                         retval = true;
                     }
@@ -70,6 +70,7 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
 
