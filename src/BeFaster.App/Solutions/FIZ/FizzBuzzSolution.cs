@@ -28,10 +28,35 @@ namespace BeFaster.App.Solutions.FIZ
 
         static bool IsDeluxe(int input) {
 
+            //1st test, if number < 10 then exit now.
+            if (input < 10) {
+                return false;
+            }
+            else {
 
-            var retval = false;
+                var retval = false;
+                var test = input.ToString();
 
-            return retval;
+                for (var i = 1; i < test.Length; i++)
+                {
+
+                    if (test.Substring(i) == test.Substring(i - 1))
+                    {
+                        retval = true;
+                    }
+                    else {
+                        return false;
+                    }
+
+
+                }
+
+
+                return retval;
+
+            }
+
+
 
         }
 
@@ -39,3 +64,4 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
