@@ -32,7 +32,12 @@ using NUnit.Framework;
             return FizzBuzzSolution.FizzBuzz(input);
         }
 
-
+        [TestCase(33, ExpectedResult = "fake deluxe")]
+        public string FakeDeluxeTrue(int input)
+        {
+            return FizzBuzzSolution.FizzBuzz(input);
+        }
 
     }
 }
+
