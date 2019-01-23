@@ -8,10 +8,10 @@ using NUnit.Framework;
     [TestFixture]
     public class DeluxeSolutionTest
     {
-        [TestCase(11, ExpectedResult ="deluxe")]
-        public string DeluxeTrueTest(int input) {
-            return FizzBuzzSolution.FizzBuzz(input);
-        }
+        //[TestCase(11, ExpectedResult ="deluxe")]
+        //public string DeluxeTrueTest(int input) {
+        //    return FizzBuzzSolution.FizzBuzz(input);
+        //}
 
 
         [TestCase(222, ExpectedResult = "fizz deluxe")]
@@ -32,12 +32,20 @@ using NUnit.Framework;
             return FizzBuzzSolution.FizzBuzz(input);
         }
 
-        [TestCase(33, ExpectedResult = "fake deluxe")]
+        [TestCase(33, ExpectedResult = "fizz fake deluxe")]
+        public string FizzFakeDeluxeTrue(int input)
+        {
+            return FizzBuzzSolution.FizzBuzz(input);
+        }
+
+        [TestCase(11, ExpectedResult = "fake deluxe")]
         public string FakeDeluxeTrue(int input)
         {
             return FizzBuzzSolution.FizzBuzz(input);
         }
 
+
     }
 }
+
 
