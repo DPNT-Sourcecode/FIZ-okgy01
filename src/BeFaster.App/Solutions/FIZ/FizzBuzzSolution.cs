@@ -10,7 +10,7 @@ namespace BeFaster.App.Solutions.FIZ
 
             int ofThree = number % 3;
             var ofFive = number % 5;
-            if (IsDeluxe(number)==true && (ofThree == 0 || number.ToString().Contains("3")) && (ofFive == 0 || number.ToString().Contains("5")))
+            if (IsDeluxe(number)==true && IsFakeDeluxe(number) == false && (ofThree == 0 || number.ToString().Contains("3")) && (ofFive == 0 || number.ToString().Contains("5")))
             {
                 return "fizz buzz deluxe";
             }else if ((ofThree == 0 || number.ToString().Contains("3"))  && (ofFive == 0 || number.ToString().Contains("5")  )) {
@@ -35,7 +35,7 @@ namespace BeFaster.App.Solutions.FIZ
             else if (ofFive !=0  && (ofThree == 0 || number.ToString().Contains("3") && IsDeluxe(number)==false)) {
                 return "fizz";
             }
-            else if (IsDeluxe(number) == true && (ofThree != 0 || !number.ToString().Contains("3")) && (ofFive != 0 || !number.ToString().Contains("5")))
+            else if (IsDeluxe(number) == true  && IsFakeDeluxe(number)==false  && (ofThree != 0 || !number.ToString().Contains("3")) && (ofFive != 0 || !number.ToString().Contains("5")))
             {
                 return "deluxe";
             }
@@ -54,6 +54,8 @@ namespace BeFaster.App.Solutions.FIZ
 
             //1st test, if number < 10 then exit now.
             if (input < 10) {
+                return false;
+            }else if (input % 2 != 0) {
                 return false;
             }
             else {
@@ -80,7 +82,42 @@ namespace BeFaster.App.Solutions.FIZ
 
             }
 
+        }
 
+
+        static bool IsFakeDeluxe(int input)
+        {
+
+            //1st test, if number < 10 then exit now.
+            if (input > 10 && input % 2 != 0)
+            
+            {
+
+                var retval = false;
+                var test = input.ToString();
+
+                for (var i = 1; i < test.Length; i++)
+                {
+
+                    if (test.Substring(i, 1) == test.Substring((i - 1), 1))
+                    {
+                        retval = true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+
+
+                }
+
+
+                return retval;
+
+            }
+            else {
+                return false;
+            }
 
         }
 
@@ -88,3 +125,4 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
