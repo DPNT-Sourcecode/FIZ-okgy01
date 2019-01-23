@@ -45,8 +45,11 @@ namespace BeFaster.App.Solutions.FIZ
             {
                 return "deluxe";
             }
+            else if (IsDeluxe(number) == false && IsFakeDeluxe(number) == true && (ofThree != 0 || !number.ToString().Contains("3")) && (ofFive != 0 || !number.ToString().Contains("5")))
+            {
+                return "fake deluxe";
+            }
 
-           
             else
             {
                 return number.ToString();
@@ -131,6 +134,7 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
 
