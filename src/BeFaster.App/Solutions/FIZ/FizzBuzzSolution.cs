@@ -96,8 +96,8 @@ namespace BeFaster.App.Solutions.FIZ
 
                 //}
 
-            if (input % 3 ==0 || input.ToString().Contains("3") ||
-                input % 5 == 0 || input.ToString().Contains("5")
+            if (input % 3 == 0 && input.ToString().Contains("3") ||
+                input % 5 == 0 && input.ToString().Contains("5")
                 ) {
                 return true;
             }
@@ -116,14 +116,19 @@ namespace BeFaster.App.Solutions.FIZ
         static bool IsFakeDeluxe(int input)
         {
 
-
+            if (input % 2 != 0) {
+                return true;
+            }
+            else {
+                return false;
+            }
 
 
 
 
             //1st test, if number < 10 then exit now.
             //if (input > 10 && input % 2 != 0)
-            
+
             //{
 
             //    var retval = false;
@@ -158,5 +163,6 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
