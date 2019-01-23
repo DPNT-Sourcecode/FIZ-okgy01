@@ -44,8 +44,16 @@ using NUnit.Framework;
             return FizzBuzzSolution.FizzBuzz(input);
         }
 
+        [TestCase(55, ExpectedResult = "buzz fake deluxe")]
+        public string BuzzFakeDeluxeTrue(int input)
+        {
+            return FizzBuzzSolution.FizzBuzz(input);
+        }
+
+
 
     }
 }
+
 
 
