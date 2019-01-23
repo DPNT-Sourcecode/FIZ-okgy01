@@ -20,5 +20,12 @@ using NUnit.Framework;
             return FizzBuzzSolution.FizzBuzz(input);
         }
 
+        [TestCase(3, ExpectedResult = "fizz")]
+        public string FizzTestTrue(int input)
+        {
+            return FizzBuzzSolution.FizzBuzz(input);
+        }
+
     }
 }
+
