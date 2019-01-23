@@ -71,35 +71,44 @@ namespace BeFaster.App.Solutions.FIZ
 
         static bool IsDeluxe(int input) {
 
-            //1st test, if number < 10 then exit now.
-            if (input < 10) {
-                return false;
-            }else if (input % 2 != 0) {
-                return false;
+            ////1st test, if number < 10 then exit now.
+            //if (input < 10) {
+            //    return false;
+            //}else if (input % 2 != 0) {
+            //    return false;
+            //}
+            //else {
+
+                //var retval = false;
+                //var test = input.ToString();
+
+                //for (var i = 1; i < test.Length; i++)
+                //{
+
+                //    if (test.Substring(i,1) == test.Substring((i - 1),1))
+                //    {
+                //        retval = true;
+                //    }
+                //    else {
+                //        return false;
+                //    }
+
+
+                //}
+
+            if (input % 3 ==0 || input.ToString().Contains("3") ||
+                input % 5 == 0 || input.ToString().Contains("5")
+                ) {
+                return true;
             }
             else {
-
-                var retval = false;
-                var test = input.ToString();
-
-                for (var i = 1; i < test.Length; i++)
-                {
-
-                    if (test.Substring(i,1) == test.Substring((i - 1),1))
-                    {
-                        retval = true;
-                    }
-                    else {
-                        return false;
-                    }
-
-
-                }
-
-
-                return retval;
-
+                return false;
             }
+
+
+
+
+
 
         }
 
@@ -107,36 +116,41 @@ namespace BeFaster.App.Solutions.FIZ
         static bool IsFakeDeluxe(int input)
         {
 
+
+
+
+
+
             //1st test, if number < 10 then exit now.
-            if (input > 10 && input % 2 != 0)
+            //if (input > 10 && input % 2 != 0)
             
-            {
+            //{
 
-                var retval = false;
-                var test = input.ToString();
+            //    var retval = false;
+            //    var test = input.ToString();
 
-                for (var i = 1; i < test.Length; i++)
-                {
+            //    for (var i = 1; i < test.Length; i++)
+            //    {
 
-                    if (test.Substring(i, 1) == test.Substring((i - 1), 1))
-                    {
-                        retval = true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-
-
-                }
+            //        if (test.Substring(i, 1) == test.Substring((i - 1), 1))
+            //        {
+            //            retval = true;
+            //        }
+            //        else
+            //        {
+            //            return false;
+            //        }
 
 
-                return retval;
+            //    }
 
-            }
-            else {
-                return false;
-            }
+
+            //    return retval;
+
+            //}
+            //else {
+            //    return false;
+            //}
 
         }
 
@@ -144,4 +158,5 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
