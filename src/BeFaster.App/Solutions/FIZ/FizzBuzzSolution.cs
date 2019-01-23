@@ -16,7 +16,7 @@ namespace BeFaster.App.Solutions.FIZ
             }else if ((ofThree == 0 || number.ToString().Contains("3"))  && (ofFive == 0 || number.ToString().Contains("5")  )) {
                 return "fizz buzz";
             }
-            else if ((ofFive == 0 || number.ToString().Contains("5") && IsDeluxe(number) == true && IsFakeDeluxe(number) == false && ofThree != 0 && IsDeluxe(number) == true)
+            else if ((ofFive == 0 || number.ToString().Contains("5") && IsDeluxe(number) == true && IsFakeDeluxe(number) == false) && ofThree != 0 )
             {
                 return "buzz deluxe";
             }
@@ -25,12 +25,12 @@ namespace BeFaster.App.Solutions.FIZ
             else if ((ofFive == 0 || number.ToString().Contains("5") && IsDeluxe(number) == false) && ofThree != 0 ) {
                 return "buzz";
             }
-            else if (ofFive != 0 && ((ofThree == 0 || number.ToString().Contains("3")) && IsDeluxe(number) == true) && IsFakeDeluxe(number == false))
+            else if (ofFive != 0 && ((ofThree == 0 || number.ToString().Contains("3")) && IsDeluxe(number) == true) && IsFakeDeluxe(number) == false)
             {
                 return "fizz deluxe";
 
             }
-            else if (ofFive != 0 && ((ofThree == 0 || number.ToString().Contains("3")) && IsDeluxe(number) == false) && IsFakeDeluxe(number == true))
+            else if (ofFive != 0 && ((ofThree == 0 || number.ToString().Contains("3")) && IsDeluxe(number) == false) && IsFakeDeluxe(number) == true)
             {
                 return "fizz fake deluxe";
 
@@ -131,5 +131,6 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
