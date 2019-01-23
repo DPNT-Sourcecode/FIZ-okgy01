@@ -26,7 +26,7 @@ namespace BeFaster.App.Solutions.FIZ
             }
 
 
-            else if ((ofFive == 0 || number.ToString().Contains("5") ) && ofThree != 0  && IsDeluxe(number)== false) {
+            else if ((ofFive == 0 || number.ToString().Contains("5") && IsDeluxe(number) == false) && ofThree != 0 ) {
                 return "buzz";
             }
             else if (ofFive != 0 && ((ofThree == 0 || number.ToString().Contains("3")) && IsDeluxe(number) == true))
@@ -87,6 +87,7 @@ namespace BeFaster.App.Solutions.FIZ
 
     }
 }
+
 
 
 
